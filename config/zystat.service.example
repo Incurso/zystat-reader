@@ -1,0 +1,18 @@
+[Unit]
+Description= ZyStat
+After=systemd-journald.socket basic.target system.slice
+
+[Service]
+ExecStart=/opt/zystat-reader/index.js > /opt/sat4c/syslog
+WorkingDirectory=/opt/zystat-reader
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=zystat-reader
+User=zystat
+Group=zystat
+Environment=NODE_ENV=production
+ELinuxContext=system_u:system_r:httpd_t:s0-s0:c1
+
+[Install]
+WantedBy=multi-user.target
