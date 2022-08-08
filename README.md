@@ -19,7 +19,7 @@ sudo chmod ug+x /opt/zystat-reader/index.js
 
 ### Copy service file to SystemD
 ```
-sudo cp /opt/zystat/config/zystat.service.example /etc/systemd/system/zystat.service
+sudo cp /opt/zystat-reader/config/zystat.service.example /etc/systemd/system/zystat.service
 sudo systemctl enable zystat
 sudo systemctl start zystat
 ```
