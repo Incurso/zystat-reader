@@ -1,0 +1,11 @@
+USERNAME: <user@example.com>
+PASSWORD: <password>
+
+URLS:
+  LOGIN: http://<IP>:<PORT>/StatisticsPortal/login
+  LOGIN_AUTH: http://<IP>:<PORT>/Authentication/loginAuth
+  CHANNEL_ENTRIES: http://<IP>:<PORT>/StatisticsPortal/channelEntries
+
+LISTENING_PORT: 8083
+
+LOG_FILE: ./zystat-reader.log
